@@ -25,36 +25,6 @@ services:
       - 50090:50090
     tty: true
 
-#  namenode:
-#    image: hdfs-namenode
-#    container_name: namenode
-#    hostname: namenode
-#    ports:
-#      - 8020:8020
-#      - 8042:8042
-#      - 8088:8088
-#      - 9000:9000
-#      - 9864:9864
-#      - 9870:9870
-#      - 9868:9868
-#      - 10020:10020
-#      - 19888:19888
-#      - 50010:50010
-#      - 50020:50020
-#      - 50070:50070
-#      - 50075:50075
-#      - 50090:50090
-#    tty: true
-#    volumes:
-#      - ./data:/hadoop/data
-#    environment:
-#      - "HADOOP_CONF_DIR=/etc/hadoop"
-#      - HDFS_NAMENODE_USER="root"
-#      - HDFS_DATANODE_USER="root"
-#      - HDFS_SECONDARYNAMENODE_USER="root
-#      - YARN_RESOURCEMANAGER_USER="root"
-#      - YARN_NODEMANAGER_USER="root"
-
   sds:
     build:
       context: sdc
