@@ -33,3 +33,8 @@ services:
       - hdfs
     ports:
       - "18630:18630"
+    volumes:
+    - sdc-data:/data
+
+volumes:
+  sdc-data:
