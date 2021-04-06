@@ -14,7 +14,7 @@ services:
     volumes:
     - hdfs-data:/hadoop/data
 
-  sds:
+  sdc:
     build:
       context: sdc
       dockerfile: Dockerfile
