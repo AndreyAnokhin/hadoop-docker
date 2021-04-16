@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+
+  hdfs:
+    build:
+      context: hdfs
+      dockerfile: Dockerfile
+    container_name: hdfs
+    hostname: hdfs
+    tty: true
+    ports:
+      - "9870:9870"
+    volumes:
+    - hdfs-data:/hadoop/data
+
+  nifi:
+    build:
+      context: nifi
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+
+volumes:
+  hdfs-data:
